@@ -3,8 +3,7 @@
 
 ## Reproduce Steps
 
-1. Invoke `run.sh` with default JVM
-2. Start `Http Mirror Server` under `Test Fragment`
+1. Run `run.sh`. Start `Http Mirror Server` under `Test Fragment`
 3. Open log view (`Options` -> `Log View`)
 4. Start testing
 5. Open `View Tree Result`, click the result in the tree.

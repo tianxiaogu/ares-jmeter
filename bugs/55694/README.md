@@ -1,5 +1,11 @@
 # JMeter Bug [55694](http://bz.apache.org/bugzilla/show_bug.cgi?id=55694)
 
+
+## Steps
+
+1. Start the testing
+2. Check results
+
 ## Patch
 
 If `matchStrings` does not throw an exception, a pre-allocated empty `ArrayList` will be returned finally.

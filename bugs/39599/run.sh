@@ -2,9 +2,7 @@
 
 DIR=$(pushd "$(dirname "$BASH_SOURCE[0]")" > /dev/null && pwd && popd > /dev/null)
 
+[ -z "$JMETER_HOME" ] && JMETER_HOME=${DIR}/../../binaries/jakarta-jmeter-2.1.1
+[ -z "$JAVA" ] && echo "Using default java at $(which java)" && JAVA=$(which java)
 
-COMMON_RUN=${DIR}/../run.sh
-
-export JMETER_HOME=${DIR}/../../binaries/jakarta-jmeter-2.1.1/
-
-JAVA=$ARES_BIN VM_OPTS=$VM_OPTS ${COMMON_RUN} -t ${DIR}/bug.jmx
+$JAVA $VM_OPTS -jar ${JMETER_HOME}/bin/ApacheJMeter.jar -t ${DIR}/bug.jmx
